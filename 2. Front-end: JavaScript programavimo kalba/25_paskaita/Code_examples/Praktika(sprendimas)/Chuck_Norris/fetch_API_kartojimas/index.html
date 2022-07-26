@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FETCH API kartojimas</title>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>Logo</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Page headline</h1>
+      </section>
+      <section>
+        <h2>Single Chuck Norris joke</h2>
+        <p id="single-joke"></p>
+      </section>
+      <section>
+        <h2>Select Chuck Norris joke by category</h2>
+        <form>
+          <label for="joke-category">Select Joke Category</label>
+          <select name="joke-category" id="joke-category">
+            <option value="animal">Animal</option>
+            <option value="career">Career</option>
+            <option value="celebrity">Celebrity</option>
+            <option value="dev">Dev</option>
+            <option value="fashion">Fasion</option>
+          </select>
+          <input type="submit" value="GET ME A JOKE" />
+        </form>
+        <p id="single-joke-by-category"></p>
+      </section>
+      <section>
+        <h2>POSTS | COMMENTS | TODOS</h2>
+        <button class="btn" data-type="posts">POSTS</button>
+        <button class="btn" data-type="comments">COMMENTS</button>
+        <button class="btn" data-type="todos">TODOS</button>
+
+        <div id="output"></div>
+      </section>
+      <section>
+        <h2>TODOS</h2>
+        <input type="radio" name="todos" id="true" />
+        <label for="true">COMPLETED</label>
+
+        <input type="radio" name="todos" id="false" />
+        <label for="false">NOT COMPLETED</label>
+        <div id="todos-output"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2021 All rights reserved</p>
+    </footer>
+  </body>
+</html>

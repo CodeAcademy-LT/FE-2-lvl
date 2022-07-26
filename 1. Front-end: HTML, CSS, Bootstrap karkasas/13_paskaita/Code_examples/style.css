@@ -1,0 +1,86 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  -------- RESPONSIVE LAYOUT -------- */
+/* .container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 100px 50px 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100px;
+  }
+} */
+/*  ---------------------------------- */
+
+.container {
+  display: grid;
+  -ms-display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px repeat(2, 50px) 100px;
+  grid-template-areas:
+    'box1 box1 box1 box1'
+    'box2 box3 box4 box5'
+    'box6 . . box7'
+    'box8 box8 box8 box8';
+  column-gap: 10px;
+  row-gap: 10px;
+  /* justify-items: start; */
+}
+
+.box-1 {
+  background-color: salmon;
+  grid-area: box1;
+}
+
+.box-2 {
+  background-color: sandybrown;
+  grid-area: box2;
+  /* justify-self: center;
+  align-self: center; */
+  place-self: center;
+}
+
+.box-3 {
+  background-color: saddlebrown;
+  grid-area: box3;
+}
+
+.box-4 {
+  background-color: burlywood;
+  grid-area: box4;
+}
+
+.box-5 {
+  background-color: lightsalmon;
+  grid-area: box5;
+}
+
+.box-6 {
+  background-color: lightseagreen;
+  grid-area: box6;
+}
+
+.box-7 {
+  background-color: lightgrey;
+  grid-area: box7;
+}
+
+.box-8 {
+  background-color: lightskyblue;
+  grid-area: box8;
+}

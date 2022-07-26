@@ -1,0 +1,9 @@
+@function themeIntensity($intensity) {
+  @if $intensity == 1 {
+    @return 0.33;
+  } @else if $intensity == 2 {
+    @return 0.66;
+  } @else if $intensity == 3 {
+    @return 1;
+  }
+}

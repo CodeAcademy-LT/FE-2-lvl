@@ -1,0 +1,31 @@
+- 1. WEB (browser) products:
+-- 1.1. WEBSITES
+--- 1.1.1. Frontend (Client Side): HTML, CSS, JavaScript (React.js / Vue.js / Angular / or other...)
+
+-- 1.2. WEB APPLICATIONS
+--- 1.2.1. Frontend (Client Side): HTML, CSS, JavaScript (React.js / Vue.js / Angular / or other...)
+--- 1.2.2. Backend (Server Side):
+---- 1.2.2.1. Programing languge: Node.js | PHP | Java ...
+---- 1.2.2.2. Database: MongoDB | MySQL | PostgreSQL ...
+----- Backend is Programing languge + Database (Node.js  + MongoDB)
+
+- 2. Three tier WEB APPLICATION architecture (https://cdn.ttgtmedia.com/rms/onlineImages/three_tier_arch_half_column_mobile.jpg):
+-- Presentation (Frontend)
+-- Application (Backend: Node.js) 
+-- Database (Backend: MongoDB)
+
+// PRACTICE:
+// -- example_1: Client Side Rendering with FE and BE separeted.
+// --- file architecture:
+// ---- frontend:
+// ------ index.html
+// ------ script.js
+// ---- backend:
+// ----- server.js
+
+// -- example_2: Server Side Rendering whre FE "lives" inside BE.
+// --- file architecture (MVC patern):
+// ---- backend:
+// ----- server.js
+// ----- views
+// ------- index.html

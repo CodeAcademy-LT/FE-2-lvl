@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS OOP</title>
+  </head>
+  <body>
+    <script>
+      // Products data from API
+      const PRODUCTS_ENDPOINT = 'products.json';
+
+      // ----- OOP -----
+      // ---------------
+
+      // // PIRMAS BŪDAS (OOP + Funkcinis)
+      // // Variables
+      // // -- DOM elements
+      // const productsElement = document.querySelector('#products');
+
+      // // -- data (stores products from PRODUCTS_ENDPOINT)
+      // let products = [];
+
+      // class SHOP {
+      //   constructor(element, array) {
+      //     this.element = element;
+      //     this.array = array;
+      //   }
+
+      //   static createProduct(product) {
+      //     let shopItem = `
+      //       <div>
+      //         <img src="${product.image}">
+      //         <h3>${product.title}</h3>
+      //         <p>${product.category.join(',')}</p>
+      //         <p>${product.price}</p>
+      //       </div>
+      //       `;
+
+      //     return shopItem;
+      //   }
+
+      //   render() {
+      //     let output = '';
+
+      //     for (let product of this.array) {
+      //       output += SHOP.createProduct(product);
+      //     }
+
+      //     this.element.innerHTML = output;
+      //   }
+      // }
+
+      // // Events
+      // window.addEventListener('DOMContentLoaded', () => {
+      //   fetch(PRODUCTS_ENDPOINT)
+      //     .then((response) => response.json())
+      //     .then((data) => {
+      //       let shop = new SHOP(productsElement, data);
+      //       shop.render();
+      //     });
+      // });
+
+      // ---------------------------------------------------------------
+
+      // ANTTRAS BŪDAS (TIK OOP)
+      // Variables
+      // -- DOM elements
+      const productsElement = document.querySelector('#products');
+      const filters = document.querySelectorAll('input[type=radio]');
+
+      // -- data (stores products from PRODUCTS_ENDPOINT)
+      let cachedProducts = [];
+
+      // Classes
+      class SHOP {
+        constructor(element, endpoint) {
+          this.element = element;
+          this.endpoint = endpoint;
+        }
+
+        static createProduct(product) {
+          let shopItem = `
+      <div>
+        <img src="${product.image}">
+        <h3>${product.title}</h3>
+        <p>${product.category.join(',')}</p>
+        <p>${product.price}</p>
+      </div>
+      `;
+
+          return shopItem;
+        }
+
+        filter(filterCategory) {
+          let products =
+            filterCategory !== 'all-products'
+              ? cachedProducts.filter((product) =>
+                  product.category.includes(filterCategory)
+                )
+              : cachedProducts.map((product) => product);
+
+          let output = '';
+
+          for (let product of products) {
+            output += SHOP.createProduct(product);
+          }
+
+          this.element.innerHTML = output;
+        }
+
+        render() {
+          return fetch(this.endpoint)
+            .then((response) => response.json())
+            .then((data) => {
+              cachedProducts.push(...data);
+
+              let products = data;
+
+              let output = '';
+
+              for (let product of products) {
+                output += SHOP.createProduct(product);
+              }
+
+              this.element.innerHTML = output;
+            });
+        }
+      }
+
+      class App {
+        static init() {
+          const shop = new SHOP(productsElement, PRODUCTS_ENDPOINT);
+          shop.render();
+
+          filters.forEach((filter) => {
+            filter.addEventListener('change', (e) =>
+              shop.filter(e.target.value)
+            );
+          });
+        }
+      }
+
+      // Starting APP
+      App.init();
+    </script>
+  </body>
+</html>

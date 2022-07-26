@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEST YOUR HTML, CSS, JS SKILLS!</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./styles/1_resets.css" />
+    <link rel="stylesheet" href="./styles/2_variables.css" />
+    <link rel="stylesheet" href="./styles/3_header.css" />
+    <link rel="stylesheet" href="./styles/4_main.css" />
+    <link rel="stylesheet" href="./styles/5_index.css" />
+    <link rel="stylesheet" href="./styles/6_footer.css" />
+
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CUSTOM JS -->
+    <script defer src="./scripts/1_header.js"></script>
+    <script defer src="./scripts/4_footer.js"></script>
+  </head>
+  <body>
+    <header><!-- Navigation created with header.js --></header>
+
+    <main>
+      <div id="wrapper">
+        <div class="container">
+          <div class="hero">
+            <div class="hero__image">
+              <img
+                src="./assets/images/html-css-js.jpg"
+                alt="HTML,CSS,JS banner"
+              />
+            </div>
+            <div class="hero__headline">
+              <h1>TEST YOUR HTML, CSS, JS SKILLS!</h1>
+            </div>
+          </div>
+          <div class="quizes">
+            <div class="quizes__html">
+              <a href="./pages/html.html" class="start-btn-html">HTML Quiz</a>
+            </div>
+            <div class="quizes__css">
+              <a href="./pages/css.html" class="start-btn-css">CSS Quiz</a>
+            </div>
+            <div class="quizes__js">
+              <a href="./pages/js.html" class="start-btn-js">JavaScript Quiz</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p><span id="current-year"></span> &copy; All rights reserved</p>
+    </footer>
+  </body>
+</html>

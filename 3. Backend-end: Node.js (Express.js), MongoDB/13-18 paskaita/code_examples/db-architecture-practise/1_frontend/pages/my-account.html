@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account page | Rent a move</title>
+    <!-- Custom JS-->
+    <script defer src="../scripts/modules/nav.js"></script>
+    <script defer src="../scripts/my-account.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>Logo</div>
+      <nav><!-- created with nav.js --></nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Hello, <span id="current-user"></span></h1>
+      </section>
+
+      <section>
+        <h2>User information</h2>
+        <div id="user-information"></div>
+        <button id="user-logout-button">Logout</button>
+      </section>
+
+      <section>
+        <h2>My movies information</h2>
+
+        <section>
+          <h3>Add movie</h3>
+          <form id="add-movie-form">
+            <label for="movie_name">Movie name</label>
+            <input type="text" id="movie_name" /><br />
+
+            <label for="movie_category">Movie category</label>
+            <input type="text" id="movie_category" /><br />
+
+            <label for="movie_rent_price">Rent price</label>
+            <input type="text" id="movie_rent_price" /><br />
+
+            <input type="submit" />
+          </form>
+        </section>
+
+        <section>
+          <h3>My movies list</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Movie name</th>
+                <th>Movie category</th>
+                <th>Rent price</th>
+                <th>Availability</th>
+              </tr>
+            </thead>
+            <tbody id="user-movies"></tbody>
+          </table>
+        </section>
+
+        <section>
+          <h3>My ordered movies</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Movie name</th>
+                <th>Movie category</th>
+                <th>Rent price</th>
+                <th>Returning</th>
+              </tr>
+            </thead>
+            <tbody id="user-orders"></tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+
+    <footer>Footer</footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+/* Mobile First */
+main {
+  width: calc(100vw - (100vw - 100%));
+  min-height: calc(100vh - 48px - 38px);
+  padding: 0px 25px;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* Home page */
+main .container h1 {
+  padding: 25px 0;
+  text-align: center;
+}
+
+/* Blog page */
+main .container .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+main .container .cards .card {
+  width: 100%;
+  padding: 15px;
+
+  background-color: #f0f0f0;
+}
+
+main .container .cards .card:hover {
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  main .container .cards {
+    flex-direction: row;
+  }
+
+  main .container .cards .card {
+    width: calc(100% / 2 - 5px);
+  }
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "question": "What does CSS stand for?",
+    "answers": [
+      {
+        "text": "Colorful Style Sheets",
+        "correct": false
+      },
+      {
+        "text": "Computer Style Sheets",
+        "correct": false
+      },
+      {
+        "text": "Creative Style Sheets",
+        "correct": false
+      },
+      {
+        "text": "Cascading Style Sheets",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "What is the correct HTML for referring to an external style sheet?",
+    "answers": [
+      {
+        "text": "<style src='mystyle.css'>",
+        "correct": false
+      },
+      {
+        "text": " <link rel='stylesheet' type='text/css' href='mystyle.css'>",
+        "correct": true
+      },
+      {
+        "text": "<stylesheet>mystyle.css</stylesheet>",
+        "correct": false
+      }
+    ]
+  }
+]

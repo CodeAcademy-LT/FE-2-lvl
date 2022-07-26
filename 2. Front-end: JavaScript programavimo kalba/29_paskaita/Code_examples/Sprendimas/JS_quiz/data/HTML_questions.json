@@ -1,0 +1,40 @@
+[
+  {
+    "question": "What does HTML stand for?",
+    "answers": [
+      {
+        "text": "Hyperlinks and Text Markup Language",
+        "correct": false
+      },
+      {
+        "text": "Hyper Text Markup Language",
+        "correct": true
+      },
+      {
+        "text": "Home Tool Markup Language",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Who is making the Web standards?",
+    "answers": [
+      {
+        "text": "Microsoft",
+        "correct": false
+      },
+      {
+        "text": "Mozilla",
+        "correct": false
+      },
+      {
+        "text": "The World Wide Web Consortium",
+        "correct": true
+      },
+      {
+        "text": "Google",
+        "correct": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+Client side rendering (CSR):
+- Frontend
+- Backend
+-- Comunication: REST API
+
+Server side rendering (SSR)
+- Backend
+-- Frontend
+
+Schema: https://prnt.sc/1urlxhn

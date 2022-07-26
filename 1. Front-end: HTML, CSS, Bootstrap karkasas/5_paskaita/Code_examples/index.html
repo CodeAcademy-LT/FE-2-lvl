@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezervacijos forma</title>
+    <style>
+      /* Header */
+      header,
+      main,
+      footer {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      header div {
+        display: flex;
+        align-items: center;
+      }
+
+      header nav ul {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+      }
+
+      /* Main */
+      main section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        width: 350px;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      .form-control {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .form-control > label {
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+      }
+
+      .form-control input,
+      .form-control select {
+        width: 85%;
+      }
+
+      .form-control .answers {
+        display: flex;
+      }
+
+      .form-control .answers div {
+        display: flex;
+      }
+
+      .form-control .answers div input {
+        width: 15px;
+      }
+
+      .has-driver-license-answers div {
+        width: 60px;
+      }
+
+      .driver-license-categories-answers div {
+        width: 45px;
+      }
+
+      /* Utilities */
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>LOGO</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Rezervacijos forma</h1>
+        <form>
+          <div class="form-control">
+            <label for="name-and-surname">Vardas ir pavardė</label>
+            <input type="text" id="name-and-surname" />
+          </div>
+
+          <div class="form-control">
+            <label for="email">El. paštas</label>
+            <input type="email" id="email" />
+          </div>
+
+          <div class="form-control">
+            <label for="phone">Telefonas</label>
+            <input type="tel" id="phone" />
+          </div>
+
+          <div class="form-control">
+            <label for="service">Dominanti paslauga</label>
+            <select name="service" id="service">
+              <option value="selectServiceMessage">
+                -- pasirinkite paslaugą
+              </option>
+              <option value="car">Automobilio nuoma</option>
+              <option value="bike">Dviračio nuoma</option>
+              <option value="scooter">Paspirtuko nuoma</option>
+            </select>
+          </div>
+
+          <div class="form-control hide hasDriverLicenceContainer">
+            <label for="has-driver-license"
+              >Ar turite vairuotojo pažymėjimą?</label
+            >
+            <div class="answers has-driver-license-answers">
+              <div>
+                <label for="yes">Taip</label>
+                <input
+                  type="radio"
+                  id="yes"
+                  name="hasDriverLicense"
+                  value="yes"
+                />
+              </div>
+              <div>
+                <label for="no">Ne</label>
+                <input
+                  type="radio"
+                  id="no"
+                  name="hasDriverLicense"
+                  value="no"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-control hide driverLicenseCategoriesContainer">
+            <label for="driver-license-categories"
+              >Nurodykite turimas kategorijas:</label
+            >
+            <div class="answers driver-license-categories-answers">
+              <div>
+                <label for="a">A</label>
+                <input
+                  type="checkbox"
+                  id="a"
+                  name="driverLicenseCategories"
+                  value="a"
+                />
+              </div>
+              <div>
+                <label for="b">B</label>
+                <input
+                  type="checkbox"
+                  id="b"
+                  name="driverLicenseCategories"
+                  value="b"
+                />
+              </div>
+              <div>
+                <label for="c">C</label>
+                <input
+                  type="checkbox"
+                  id="c"
+                  name="driverLicenseCategories"
+                  value="c"
+                />
+              </div>
+              <div>
+                <label for="d">D</label>
+                <input
+                  type="checkbox"
+                  id="d"
+                  name="driverLicenseCategories"
+                  value="d"
+                />
+              </div>
+              <div>
+                <label for="be">BE</label>
+                <input
+                  type="checkbox"
+                  id="be"
+                  name="driverLicenseCategories"
+                  value="be"
+                />
+              </div>
+              <div>
+                <label for="ce">CE</label>
+                <input
+                  type="checkbox"
+                  id="ce"
+                  name="driverLicenseCategories"
+                  value="ce"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-control hide hasOtherPersonDriverLicenseContainer">
+            <label for="has-other-person-driver-license"
+              >Ar transporot priemonę vairuos kitas asmuo, kuris turi vairuotojo
+              pažymėjimą?</label
+            >
+            <div class="answers has-other-person-driver-license-answers">
+              <div>
+                <label for="yes">Taip</label>
+                <input
+                  type="radio"
+                  id="yes"
+                  name="hasOtherPersonDriverLicense"
+                  value="yes"
+                />
+              </div>
+              <div>
+                <label for="no">Ne</label>
+                <input
+                  type="radio"
+                  id="no"
+                  name="hasOtherPersonDriverLicense"
+                  value="no"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-control hide serviceUnavailableMessageContainer">
+            <p>Deja, išnuomoti šios transporto priemonės negalime.</p>
+          </div>
+
+          <div class="form-control hide additionalInformation">
+            <label for="startDate">Nuomos pradžia:</label>
+            <input type="date" id="startDate" />
+          </div>
+
+          <div class="form-control hide additionalInformation">
+            <label for="endDate">Nuomos pabaiga:</label>
+            <input type="date" id="endDate" />
+          </div>
+
+          <div class="form-control hide additionalInformation">
+            <label for="location"
+              >Miestas, kuriame ketinate atsiimti transporto priemonę:</label
+            >
+            <select name="location" id="location">
+              <option value="vilnius">Vilnius</option>
+              <option value="kaunas">kaunas</option>
+              <option value="klaipėda">Klaipėda</option>
+            </select>
+          </div>
+
+          <div class="form-control hide additionalInformation">
+            <input type="submit" />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; All rights reserved</p>
+    </footer>
+
+    <script>
+      // VARIABLES
+      // -- Variables: Dominanti paslauga
+      const selectServiceElement = document.querySelector('#service');
+      const additionalInformationElements = document.querySelectorAll(
+        '.additionalInformation'
+      );
+      const hasDriverLicenceContainerElement = document.querySelector(
+        '.hasDriverLicenceContainer'
+      );
+
+      // -- Variables: Ar turite vairuotojo pažymėjimą?
+      const hasDriverLicenseElement =
+        document.getElementsByName('hasDriverLicense');
+      const serviceUnavailableMessageContainerElement = document.querySelector(
+        '.serviceUnavailableMessageContainer'
+      );
+
+      // -- Variables: Ar transporot priemonę vairuos kitas asmuo, kuris turi vairuotojo pažymėjimą?
+      const hasOtherPersonDriverLicenseContainerElement =
+        document.querySelector('.hasOtherPersonDriverLicenseContainer');
+      const hasOtherPersonDriverLicenseElements = document.getElementsByName(
+        'hasOtherPersonDriverLicense'
+      );
+
+      // -- Variables: Nurodykite turimas kategorijas:
+      const driverLicenseCategoriesContainerElement = document.querySelector(
+        '.driverLicenseCategoriesContainer'
+      );
+
+      const driverLicenseCategoriesElements = document.getElementsByName(
+        'driverLicenseCategories'
+      );
+
+      const categories = [];
+
+      // EVENTS
+      // -- Events: Dominanti paslauga
+      selectServiceElement.addEventListener('change', (e) => {
+        if (!hasDriverLicenceContainerElement.classList.contains('hide')) {
+          hasDriverLicenceContainerElement.classList.add('hide');
+        }
+
+        if (e.target.value === 'bike' || e.target.value === 'scooter') {
+          additionalInformationElements.forEach((element) =>
+            element.classList.remove('hide')
+          );
+        } else if (e.target.value === 'car') {
+          additionalInformationElements.forEach((item) => {
+            if (!item.classList.contains('hide')) {
+              item.classList.add('hide');
+            }
+          });
+          hasDriverLicenceContainerElement.classList.remove('hide');
+        } else {
+          // later...
+        }
+      });
+
+      // -- Events: Ar turite vairuotojo pažymėjimą?
+      hasDriverLicenseElement.forEach((radio) =>
+        radio.addEventListener('change', (e) => {
+          if (e.target.value === 'no') {
+            if (
+              !driverLicenseCategoriesContainerElement.classList.contains(
+                'hide'
+              )
+            ) {
+              driverLicenseCategoriesContainerElement.classList.add('hide');
+            }
+
+            additionalInformationElements.forEach((element) => {
+              if (!element.classList.contains('hide')) {
+                element.classList.add('hide');
+              }
+            });
+
+            hasOtherPersonDriverLicenseContainerElement.classList.remove(
+              'hide'
+            );
+          } else if (e.target.value === 'yes') {
+            if (
+              !serviceUnavailableMessageContainerElement.classList.contains(
+                'hide'
+              )
+            ) {
+              serviceUnavailableMessageContainerElement.classList.add('hide');
+            }
+
+            if (
+              !hasOtherPersonDriverLicenseContainerElement.classList.contains(
+                'hide'
+              )
+            ) {
+              hasOtherPersonDriverLicenseContainerElement.classList.add('hide');
+            }
+
+            driverLicenseCategoriesContainerElement.classList.remove('hide');
+          }
+        })
+      );
+
+      // -- Events: Nurodykite turimas kategorijas:
+      driverLicenseCategoriesElements.forEach((checkbox) =>
+        checkbox.addEventListener('change', (e) => {
+          if (categories.includes(e.target.value)) {
+            const itemIndex = categories.findIndex(
+              (item) => item === e.target.value
+            );
+
+            categories.splice(itemIndex, 1);
+          } else {
+            categories.push(e.target.value);
+          }
+
+          ['b', 'c', 'd', 'd', 'be', 'ce'].forEach((item) => {
+            if (categories.includes(item)) {
+              additionalInformationElements.forEach((element) =>
+                element.classList.remove('hide')
+              );
+            } else if (categories.length === 1 && categories.includes('a')) {
+              additionalInformationElements.forEach((element) =>
+                element.classList.add('hide')
+              );
+            } else if (categories.length === 0) {
+              additionalInformationElements.forEach((element) =>
+                element.classList.add('hide')
+              );
+            }
+          });
+        })
+      );
+
+      // -- Events: Ar transporot priemonę vairuos kitas asmuo, kuris turi vairuotojo pažymėjimą?
+      hasOtherPersonDriverLicenseElements.forEach((radio) =>
+        radio.addEventListener('change', (e) => {
+          if (e.target.value === 'no') {
+            additionalInformationElements.forEach((element) => {
+              if (!element.classList.contains('hide')) {
+                element.classList.add('hide');
+              }
+            });
+
+            serviceUnavailableMessageContainerElement.classList.remove('hide');
+          } else {
+            if (
+              !serviceUnavailableMessageContainerElement.classList.contains(
+                'hide'
+              )
+            ) {
+              serviceUnavailableMessageContainerElement.classList.add('hide');
+            }
+
+            additionalInformationElements.forEach((element) =>
+              element.classList.remove('hide')
+            );
+          }
+        })
+      );
+    </script>
+  </body>
+</html>

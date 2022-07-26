@@ -1,0 +1,103 @@
+[
+  {
+    "question": "Inside which HTML element do we put the JavaScript?",
+    "answers": [
+      {
+        "text": "<scripting>",
+        "correct": false
+      },
+      {
+        "text": "<javascript>",
+        "correct": false
+      },
+      {
+        "text": "<js>",
+        "correct": false
+      },
+      {
+        "text": "<script>",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "What is the correct JavaScript syntax to change the content of this HTML element? <p id='demo'>This is a demonstration.</p>",
+    "answers": [
+      {
+        "text": "document.getElementByName('p').innerHTML = 'Hello World!'",
+        "correct": false
+      },
+      {
+        "text": "<document.getElement('p').innerHTML = 'Hello World!>'",
+        "correct": false
+      },
+      {
+        "text": "document.getElementById('demo').innerHTML = 'Hello World!'",
+        "correct": true
+      },
+      {
+        "text": "#demo.innerHTML = 'Hello World!'",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "How do you create a function in JavaScript?",
+    "answers": [
+      {
+        "text": "function myFunction()",
+        "correct": true
+      },
+      {
+        "text": "function:myFunction()",
+        "correct": false
+      },
+      {
+        "text": "function = myFunction()",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "How to write an IF statement in JavaScript?",
+    "answers": [
+      {
+        "text": "if(i == 5)",
+        "correct": true
+      },
+      {
+        "text": "if i == 5",
+        "correct": false
+      },
+      {
+        "text": "if i == 5 then",
+        "correct": false
+      },
+      {
+        "text": "if i = 5 then",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "How does a FOR loop start?",
+    "answers": [
+      {
+        "text": "for i = 1 to 5",
+        "correct": false
+      },
+      {
+        "text": "for (i = 0; i <= 5)",
+        "correct": false
+      },
+      {
+        "text": "for (i = 0; i <= 5; i++)",
+        "correct": true
+      },
+      {
+        "text": "for (i <= 5; i++)",
+        "correct": false
+      }
+    ]
+  }
+]

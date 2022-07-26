@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML QUIZ - TEST YOUR HTML, CSS, JS SKILLS!</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../styles/1_resets.css" />
+    <link rel="stylesheet" href="../styles/2_variables.css" />
+    <link rel="stylesheet" href="../styles/3_header.css" />
+    <link rel="stylesheet" href="../styles/4_main.css" />
+    <link rel="stylesheet" href="../styles/5_quiz.css" />
+    <link rel="stylesheet" href="../styles/6_footer.css" />
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CUSTOM JS -->
+    <script defer src="../scripts/1_header.js"></script>
+    <script defer src="../scripts/2_main.js"></script>
+    <script defer src="../scripts/3_html.js"></script>
+    <script defer src="../scripts/4_footer.js"></script>
+  </head>
+  <body>
+    <header><!-- Navigation created with header.js --></header>
+
+    <main>
+      <div id="wrapper">
+        <div class="container">
+          <h1>Test Your HTML Skills!</h1>
+          <div class="quiz">
+            <div id="quiz__question" class="hide">
+              <div id="question"></div>
+              <div id="answers-btns"></div>
+            </div>
+            <div class="quiz__controls">
+              <button id="start-btn" class="btn start-btn">START QUIZ</button>
+              <button id="next-btn" class="btn next-btn hide">
+                NEXT QUESTION
+              </button>
+              <p id="result" class="hide"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p><span id="current-year"></span> &copy; All rights reserved</p>
+    </footer>
+  </body>
+</html>

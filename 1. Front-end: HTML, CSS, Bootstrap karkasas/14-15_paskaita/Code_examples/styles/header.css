@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--primary-color);
+}
+
+header div {
+  width: 15%;
+  color: var(--light-color);
+}
+
+header nav {
+  width: 85%;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--light-color);
+}

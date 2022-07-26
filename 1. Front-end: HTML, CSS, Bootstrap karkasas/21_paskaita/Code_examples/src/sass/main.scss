@@ -1,0 +1,45 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/functions';
+
+h1 {
+  background-color: $primary-color;
+  color: map-get($map: $font-colors, $key: 'light');
+  font-size: map-get($map: $font-size, $key: 'large');
+}
+
+.main {
+  @include dFlex(row);
+  @include darkTheme;
+  opacity: themeIntensity(2);
+
+  #{&}__headline {
+    text-decoration: underline;
+  }
+
+  #{&}__paragraph {
+    text-decoration: line-through;
+  }
+
+  #{&}__list {
+    list-style: none;
+
+    li {
+      text-decoration: overline;
+
+      #{&}:hover {
+        @include lightTheme;
+      }
+    }
+  }
+}
+
+#section-2 {
+  @include dFlex(row-reverse);
+  @include lightTheme;
+}
+
+#section-3 {
+  @include dFlex(row);
+  @include darkTheme;
+}

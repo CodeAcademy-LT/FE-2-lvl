@@ -1,0 +1,78 @@
+/* Links style basics */
+
+a {
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+
+  display: inline-block;
+
+  padding: 10px;
+  border: 7px solid #f0f0f0;
+  box-shadow: 7px 7px 0px #f0f0f0;
+}
+
+a:hover {
+  color: #fff;
+
+  border-color: #000;
+  box-shadow: 7px 7px 0px #000;
+  background-color: #000;
+}
+
+a:visited {
+  text-decoration: line-through;
+}
+
+a:active {
+  color: #f4f4f4;
+}
+
+/* CSS units and values */
+.css-units-and-values-div {
+  max-width: 800px;
+  background-color: #f0f0f0;
+
+  margin: 20px;
+  border: 20px solid #333;
+  padding: 20px;
+}
+
+.css-units-and-values-div div {
+  background-color: yellow;
+  width: 50%;
+}
+
+.css-units-and-values-span {
+  background-color: #e0e0e0;
+}
+
+/* CSS box model */
+.css-box-model-div {
+  background-color: green;
+  color: #fff;
+
+  width: 150px;
+  padding: 25px;
+  border: 10px solid yellow;
+  margin: 30px;
+}
+
+/* CSS box Sizing */
+.css-box-sizing-content-box {
+  box-sizing: content-box;
+}
+
+.css-box-sizing-border-box {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 300px;
+  padding: 30px;
+  border: 10px solid #555;
+
+  background-color: #eaeaea;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("./partials/head.ejs")%>
+  </head>
+  <body>
+    <%-include("./partials/header.ejs")%>
+
+    <main>
+      <section class="container"><h1>Blog page</h1></section>
+      <section class="container">
+        <div class="cards">
+          <% posts.map(post => { %>
+          <div class="card">
+            <h4><%-post.title%></h4>
+            <p><%-post.body%></p>
+          </div>
+          <%}) %>
+        </div>
+      </section>
+    </main>
+
+    <%-include("./partials/footer.ejs")%>
+  </body>
+</html>

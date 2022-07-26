@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin panel</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/resets.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/admin.css" />
+    <!-- Font awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom JS -->
+    <script defer src="../scripts/admin.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="logo">Movies Rent App</div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./admin.html">Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Admin page</h1>
+
+      <section>
+        <h3>Add new movie</h3>
+        <form id="add-movie-form">
+          <div>
+            <label for="movieName">Movie name</label>
+            <input type="text" id="movieName" />
+          </div>
+
+          <div>
+            <label for="movieCategory">Movie category</label>
+            <input type="text" id="movieCategory" />
+          </div>
+
+          <div>
+            <label for="movieRentPrice">Movie rent price</label>
+            <input type="text" id="movieRentPrice" />
+          </div>
+
+          <div><input type="submit" value="Add movie" /></div>
+        </form>
+        <p id="form-submit-message"></p>
+      </section>
+
+      <section>
+        <h3>Movie list</h3>
+        <div id="movie-list-container"></div>
+        <p id="movie-update-message"></p>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

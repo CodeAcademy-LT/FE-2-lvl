@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #457b9d;
+  --secondary-color: #e63946;
+  --light-color: #f1faee;
+  --dark-color: #000;
+
+  --small-text: 0.75em;
+  --medium-text: 1em;
+  --large-text: 1.25em;
+
+  --small-headline: 1.5em;
+  --medium-headline: 2em;
+  --large-headline: 2.5em;
+}
+
+.container {
+  margin: 0 1em;
+}
+
+.headline {
+  font-size: var(--medium-headline);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 1.5em;
+  }
+
+  .headline {
+    font-size: var(--large-headline);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+}
